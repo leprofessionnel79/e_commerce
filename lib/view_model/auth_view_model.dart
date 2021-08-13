@@ -65,7 +65,7 @@ class AuthViewModel extends GetxController {
         saveUser(user);
       });
 
-      Get.offAll(HomeScreen());
+      Get.offAll(ControlView());
     } catch (e) {
       print(e.message);
       Get.snackbar('Error SignUp', e.message,
