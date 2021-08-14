@@ -30,7 +30,7 @@ class ProfileView extends StatelessWidget {
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   fit: BoxFit.fill,
-                                  image: controller.userModel == null
+                                  image: controller.userModel.pic == null
                                       ? AssetImage(
                                           "assets/images/image.jpg",
                                         )
