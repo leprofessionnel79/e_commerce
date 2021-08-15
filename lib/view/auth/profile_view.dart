@@ -13,7 +13,7 @@ class ProfileView extends StatelessWidget {
     return Scaffold(
         body: SingleChildScrollView(
       child: GetBuilder<ProfileViewModel>(
-        init: ProfileViewModel(),
+        init: Get.find(),
         builder: (controller) => controller.loading.value
             ? Center(child: CircularProgressIndicator())
             : Container(
@@ -30,13 +30,13 @@ class ProfileView extends StatelessWidget {
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   fit: BoxFit.fill,
-                                  image: controller.userModel.pic == null
+                                  image: (controller.userModel.pic == "" || controller.userModel.pic == null)
                                       ? AssetImage(
                                           "assets/images/image.jpg",
                                         )
-                                      : controller.userModel.pic == "default"
-                                          ? AssetImage(
-                                              "assets/images/image.jpg")
+                                      // : controller.userModel.pic == "default"
+                                      //     ? AssetImage(
+                                      //         "assets/images/image.jpg")
                                           : NetworkImage(
                                               controller.userModel.pic)),
                               borderRadius:

@@ -4,6 +4,7 @@ import 'package:e_commerceapp/view_model/auth_view_model.dart';
 import 'package:e_commerceapp/view_model/checkout_view_model.dart';
 import 'package:e_commerceapp/view_model/control_view_model.dart';
 import 'package:e_commerceapp/view_model/home_view_model.dart';
+import 'package:e_commerceapp/view_model/profile_view_model.dart';
 import 'package:e_commerceapp/widget/control_view.dart';
 import 'package:get/get.dart';
 
@@ -17,5 +18,6 @@ class Binding extends Bindings {
     Get.lazyPut(() => CartProductModel());
     Get.lazyPut(() => LocalStorageData());
     Get.lazyPut(() => CheckOutViewModel());
+    Get.lazyPut(() => ProfileViewModel());
   }
 }
